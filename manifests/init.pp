@@ -3,7 +3,6 @@ class rpmforge {
         baseurl     => "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/",
         enabled     => 1,
         gpgcheck    => 1,
-        mirrorlist  => "http://apt.sw.be/redhat/el${::os_maj_version}/en/mirrors-rpmforge",
         gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
         descr       => "Rpmforge"
     }
