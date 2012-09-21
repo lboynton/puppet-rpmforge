@@ -7,6 +7,14 @@ class rpmforge {
         descr       => "Rpmforge"
     }
     
+    yumrepo { 'rpmforge-extras':
+        baseurl     => "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/extras/",
+        enabled     => 0,
+        gpgcheck    => 1,
+        gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
+        descr       => "Rpmforge extras"
+    }
+    
     file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag":
       ensure => present,
       owner  => 'root',
