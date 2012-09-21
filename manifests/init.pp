@@ -5,7 +5,7 @@ class rpmforge {
         gpgcheck    => 1,
         mirrorlist  => "http://apt.sw.be/redhat/el${::os_maj_version}/en/mirrors-rpmforge",
         gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
-        description => "Rpmforge"
+        descr       => "Rpmforge"
     }
     
     file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag":
