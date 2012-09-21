@@ -13,7 +13,7 @@ class rpmforge {
       owner  => 'root',
       group  => 'root',
       mode   => '0644',
-      source => "puppet:///modules/dbserver/RPM-GPG-KEY-rpmforge-dag",
+      source => "puppet:///modules/rpmforge/RPM-GPG-KEY-rpmforge-dag",
     }
     
     epel::rpm_gpg_key{ "rpmforge-dag":
