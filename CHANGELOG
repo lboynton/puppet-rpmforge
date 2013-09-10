@@ -1,3 +1,5 @@
+2013-09-10 Lee Boynton <lee@lboynton.com> 0.1.1
+Added option to disable repo
 2013-06-11 Lee Boynton <lee@lboynton.com> 0.1.0
 Testing param was renamed to extras to better reflect usage
 2013-01-28 Lee Boynton <lee@lboynton.com> 0.0.1
