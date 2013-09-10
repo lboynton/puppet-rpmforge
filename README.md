@@ -18,6 +18,14 @@ class {'rpmforge':
 }
 ```
 
+If you later want to disable the repo:
+
+```puppet
+class {'rpmforge':
+	enabled => false,
+}
+```
+
 Dependencies
 --------------
 * [puppet-module-epel](https://github.com/stahnma/puppet-module-epel)

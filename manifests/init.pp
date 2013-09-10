@@ -1,9 +1,10 @@
 class rpmforge(
-    $extras = 0
+    $enabled = 1,
+    $extras  = 0
 ) {
     yumrepo { 'rpmforge':
         baseurl     => "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/rpmforge/",
-        enabled     => 1,
+        enabled     => $enabled,
         gpgcheck    => 1,
         gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
         descr       => "Rpmforge"
