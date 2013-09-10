@@ -14,7 +14,7 @@ Or to enable extras repo:
 
 ```puppet
 class {'rpmforge':
-	extras => true,
+	extras => 1,
 }
 ```
 
@@ -22,7 +22,7 @@ If you later want to disable the repo:
 
 ```puppet
 class {'rpmforge':
-	enabled => false,
+	enabled => 0,
 }
 ```
 
