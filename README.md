@@ -18,6 +18,12 @@ class {'rpmforge':
 }
 ```
 
+```puppet
+class {'rpmforge':
+	testing => 1,
+}
+```
+
 If you later want to disable the repo:
 
 ```puppet
