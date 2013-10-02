@@ -18,6 +18,8 @@ class {'rpmforge':
 }
 ```
 
+Enable the testing repo:
+
 ```puppet
 class {'rpmforge':
 	testing => 1,
