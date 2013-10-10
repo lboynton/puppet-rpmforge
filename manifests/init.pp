@@ -1,7 +1,7 @@
 class rpmforge(
     $enabled = 1,
     $extras  = 0,
-    $testing = 1
+    $testing = 0
 ) {
     yumrepo { 'rpmforge':
         baseurl     => "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/rpmforge/",
