@@ -1,3 +1,7 @@
+# Class: rpmforge
+#
+# This class sets up the RPMForge yum repo
+#
 class rpmforge(
     $enabled = 1,
     $extras  = 0,
@@ -8,7 +12,7 @@ class rpmforge(
         enabled     => $enabled,
         gpgcheck    => 1,
         gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
-        descr       => "Rpmforge"
+        descr       => 'Rpmforge',
     }
 
     yumrepo { 'rpmforge-extras':
@@ -16,7 +20,7 @@ class rpmforge(
         enabled     => $extras,
         gpgcheck    => 1,
         gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
-        descr       => "Rpmforge extras"
+        descr       => 'Rpmforge extras',
     }
 
     yumrepo { 'rpmforge-testing':
@@ -24,7 +28,7 @@ class rpmforge(
         enabled     => $testing,
         gpgcheck    => 1,
         gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
-        descr       => "Rpmforge testing",
+        descr       => 'Rpmforge testing',
     }
 
     file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag":
@@ -32,10 +36,10 @@ class rpmforge(
         owner  => 'root',
         group  => 'root',
         mode   => '0644',
-        source => "puppet:///modules/rpmforge/RPM-GPG-KEY-rpmforge-dag",
+        source => 'puppet:///modules/rpmforge/RPM-GPG-KEY-rpmforge-dag',
     }
 
-    epel::rpm_gpg_key{ "rpmforge-dag":
-        path => "/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag",
+    epel::rpm_gpg_key{ 'rpmforge-dag':
+        path => '/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
     }
 }
