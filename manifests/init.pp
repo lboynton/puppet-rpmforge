@@ -40,6 +40,8 @@ class rpmforge(
     }
 
     epel::rpm_gpg_key{ 'rpmforge-dag':
-        path => '/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
+        path    => '/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
+        before  => Yumrepo['rpmforge', 'rpmforge-extras', 'rpmforge-testing'],
+        require => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag'],
     }
 }
