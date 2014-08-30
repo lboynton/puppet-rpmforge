@@ -31,7 +31,7 @@ class rpmforge(
         descr       => 'Rpmforge testing',
     }
 
-    file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag":
+    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag':
         ensure => present,
         owner  => 'root',
         group  => 'root',
