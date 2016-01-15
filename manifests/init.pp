@@ -8,7 +8,7 @@ class rpmforge(
     $testing = 0
 ) {
     yumrepo { 'rpmforge':
-        baseurl     => "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/rpmforge/",
+        baseurl     => "http://apt.sw.be/redhat/el${::os['release']['major']}/en/${::architecture}/rpmforge/",
         enabled     => $enabled,
         gpgcheck    => 1,
         gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
@@ -16,7 +16,7 @@ class rpmforge(
     }
 
     yumrepo { 'rpmforge-extras':
-        baseurl     => "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/extras/",
+        baseurl     => "http://apt.sw.be/redhat/el${::os['release']['major']}/en/${::architecture}/extras/",
         enabled     => $extras,
         gpgcheck    => 1,
         gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
@@ -24,7 +24,7 @@ class rpmforge(
     }
 
     yumrepo { 'rpmforge-testing':
-        baseurl     => "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/testing",
+        baseurl     => "http://apt.sw.be/redhat/el${::os['release']['major']}/en/${::architecture}/testing",
         enabled     => $testing,
         gpgcheck    => 1,
         gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
